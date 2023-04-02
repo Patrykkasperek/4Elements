@@ -1,0 +1,336 @@
+
+
+body{
+    font-family: 'Kanit', sans-serif;
+    margin: 0 auto;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+#startGame{
+    width:100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+
+#starter{
+    width: 30%;
+    padding: 10%;
+    background-color: rgba(169, 169, 169, 0.7);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container{
+    background-image: url(img/choosingBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    transition:1s;
+}
+
+
+
+header{
+    width: 65%;
+    font-size: 200%;
+    min-width: 336px;
+    text-align: center;
+    display: none;
+    justify-content: center;
+    padding: 10px;
+
+    
+
+}
+#chooseYourElement{
+    
+    font-size: 150%;
+    width: 60%;
+    min-width: 200px ;
+    text-align: center;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#elemental{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 188px;
+    height: 200px;
+    
+}
+
+.toChoose{
+    margin: 10px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding:60px;
+    text-align: center;
+}
+
+.toChoose:hover{
+    opacity: 0.5;
+}
+
+#fire, .fire{
+    background-image: url(img/fire.png);
+    background-size: 110px;
+    background-repeat: no-repeat;
+    
+}
+#water, .water{
+    background-image: url(img/water.png);
+    background-size: 110px;
+    background-repeat: no-repeat;
+}
+#earth, .earth{
+    background-image: url(img/earth.png);
+    background-size: 110px;
+    background-repeat: no-repeat;
+}
+#air, .air{
+    background-image: url(img/air.png);
+    background-size: 110px;
+    background-repeat: no-repeat;
+}
+
+#buttons{
+    display:none;
+    width: 80%;
+    justify-content:center;
+    align-items: center;
+
+}
+
+.submit{
+    text-align: center;
+    margin:4%;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    background-color: rgb(49, 49, 49);
+    margin-top: 5%;
+    padding:2%;
+}
+
+#gameplay{
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    z-index: 1;
+    height: 19%;
+}
+
+.gameButtons{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    height: 50%;
+    margin:5px;
+    width: 25%;
+    max-width: 150px;
+    min-width: 80px;
+    max-height: 150px;
+    justify-content: center;
+    
+}
+
+
+
+
+#gameAction{
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: end;
+    display:none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    background-image: url(img/elementsBackground.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#target{
+    
+    position:absolute;
+    top:0px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    animation: 2s dotMoving cubic-bezier(1,.99,0,-0.02);
+    
+}
+
+@keyframes dotMoving {
+    0%{
+
+    }
+    100%{
+        transform: translateY(100vh);
+    }
+    
+}
+
+#myArea{
+    background-color: black;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pointer, #timer{
+    font-size: 300%;
+    width: 50%;
+    text-align: center;
+}
+
+
+#timeAndPointsBox{
+    display: flex;
+    backdrop-filter: blur(10px);
+    
+
+}
+
+#tablePoints{
+    border-spacing: 0px 5px;
+    display:none;
+    background-color: rgb(0, 0, 0);
+    min-height: 200px;
+    text-align: center;
+    width:100%;
+
+    
+}
+
+th{
+    font-size: 130%;
+}
+
+tr{
+    height: 9vh;
+    
+}
+
+td{
+    width: 15%;
+    color:rgb(255, 255, 255) ;
+}
+
+#tablePoints tr td:nth-child(1){
+    background-color: rgba(210, 105, 30, 0.4)
+}
+
+#tablePoints tr td:nth-child(2){
+    background-color: rgba(0, 153, 255, 0.4)
+}
+
+#tablePoints tr td:nth-child(3){
+    background-color: rgba(92, 50, 0, 0.4);
+}
+#tablePoints tr td:nth-child(4){
+    background-color: rgba(0, 242, 255, 0.4);
+    
+}
+
+#remember{
+    background-color: rgba(0, 0, 0);
+    padding-top:30px ;
+    display:none;
+    text-align: center;
+    width: 90%;
+    padding:4% 5%;
+    font-size: 90%;
+}
+
+.el{
+    width: 150px; 
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#endCard{
+    height:100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#lastWords{
+    max-width: 350px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#sound, #soundOnAction{
+    display: none;
+    z-index: 1;
+    width: 100%;
+    height: 6%;
+}
+
+#soundControl, #soundControlAction, .on{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60%;
+    flex-direction: row;
+    margin: 2%;
+
+}
+
+.on{
+    background-image: url(img/volume-icon.png);
+}
+
+.off{
+    background-image: url(img/sound-icon.png);
+}
+
+#result{
+    margin: 0 auto;
+    font-size: 300%
+}

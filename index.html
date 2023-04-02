@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+    <script src="JS/main.js" type="module"></script>
+    <title>Document</title>
+</head>
+<body>
+    <audio src="sounds/dark-trap-beat-it-follows-you-141115.mp3" id="openSound" loop></audio>
+    <audio src="sounds/gameSound.mp3" id="gameSound" loop></audio>
+    <audio src="sounds/fireSound.mp3" id="fireSound"></audio>
+    <audio src="sounds/waterSound.wav" id="waterSound"></audio>
+    <audio src="sounds/earthSound.wav" id="earthSound"></audio>
+    <audio src="sounds/airSound.wav" id="airSound"></audio>
+    <audio src="sounds/attack.mp3" id="attackSound"></audio>
+    <audio src="sounds/defenceSound.mp3" id="defenceSound"></audio>
+
+    <div class="container">
+        <div id='sound'>
+            <div id="soundControl" class="on"></div>
+        </div>
+        <header id="header">Choose your element:</header>
+        
+        <div id="startGame"><div id="starter">START</div></div>
+            <div id="chooseYourElement">
+                <div id="elementsCollection">
+                    <div class = toChoose id="fire"></div>
+                    <div class = toChoose id="water"></div>
+                    <div class = toChoose id="earth"></div>
+                    <div class = toChoose id="air"></div>
+                </div>
+            </div>
+
+            <table id="tablePoints" cellspacing="0" >
+                    <tr>
+                        <th class="el" rowspan="4"></th>
+                        <th class="el" rowspan="4">VS</th>
+                        <th>Fire</th>
+                        <th>Water</th>
+                        <th>Earth</th>
+                        <th>Air</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+            </table>
+            
+            <div id = "remember">Every second of the game, different elements of nature fall on your territory. You have three choices - use the keys ATTACK or DEFEND, or do nothing (BYPASS) to pass them to your territory. This table is different for each element you choose at the beginning.</div>
+            <div id = "buttons">
+                <div class = "submit" id = "back">Choose other <br> &lt; </div>
+                <div class = "submit" id = "next">Next step <br> &gt;</div>
+            </div>
+
+            <div id="gameAction">
+                <div id='soundOnAction'>
+                    <div id="soundControlAction" class="off"></div>
+                </div>
+                <div id="timeAndPointsBox">
+                    <div id="pointer">0</div>
+                    <div id="timer">60</div>
+                </div>
+                <div id="myArea">BYPASS</div>
+                
+                <div id="gameplay">
+                    <div id="attack" class="gameButtons">ATTACK</div>
+                    <div id="defend" class="gameButtons">DEFEND</div>
+            </div>
+        </div>
+        <div id="endCard">
+            <div id="lastWords"></div>
+
+        </div>
+    </div>
+    
+    
+</body>
+</html>
